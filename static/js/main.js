@@ -35,3 +35,14 @@
   window.addEventListener('resize', upd);
   upd();
 })();
+
+// Menu na mobilu: bez JS zůstává navigace viditelná.
+(function () {
+  var b = document.querySelector('.menu-tl'), n = document.getElementById('hl-nav');
+  if (!b || !n) return;
+  var mq = window.matchMedia('(max-width: 47.99rem)');
+  function set() { document.documentElement.classList.toggle('js-menu', mq.matches); b.hidden = !mq.matches; if (!mq.matches) n.classList.remove('otevrene'); }
+  b.addEventListener('click', function () { var o = n.classList.toggle('otevrene'); b.setAttribute('aria-expanded', o); });
+  n.addEventListener('click', function (e) { if (e.target.tagName === 'A') { n.classList.remove('otevrene'); b.setAttribute('aria-expanded', 'false'); } });
+  mq.addEventListener('change', set); set();
+})();

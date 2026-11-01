@@ -1,6 +1,42 @@
 [
-  {"nazev": "Inžiniering, programovanie a servis", "ikona": "01", "body": ["Kompletné inžinierske služby a odborné poradenstvo", "Programovanie a vývoj aplikačného softvéru", "Servis, diagnostika a technická podpora"]},
-  {"nazev": "Priemyselná automatizácia", "ikona": "02", "body": ["Komplexné riešenia priemyselnej automatizácie", "Vizualizácia a riadenie technologických procesov", "Predaj a distribúcia komponentov priemyselnej automatizácie"]},
-  {"nazev": "Robotika a robotizácia", "ikona": "03", "body": ["Automatizácia a robotizácia výrobných procesov", "Programovanie a integrácia robotických systémov", "Integrácia kamerových inšpekčných systémov"]},
-  {"nazev": "Výrobné linky a jednoúčelové stroje", "ikona": "04", "body": ["Komplexné návrhy a riešenia výrobných liniek a strojov", "Výroba jednoúčelových strojov", "Modernizácia, rekonštrukcia a servis výrobných liniek"]}
+ {
+  "nazev": "Inžiniering, programovanie a servis",
+  "body": [
+   "Kompletné inžinierske služby a odborné poradenstvo",
+   "Programovanie a vývoj aplikačného softvéru",
+   "Servis, diagnostika a technická podpora"
+  ],
+  "foto": "montaz.png",
+  "alt": "Detail montážnej linky dosiek plošných spojov s pneumatikou a robotmi"
+ },
+ {
+  "nazev": "Priemyselná automatizácia",
+  "body": [
+   "Komplexné riešenia priemyselnej automatizácie",
+   "Vizualizácia a riadenie technologických procesov",
+   "Predaj a distribúcia komponentov priemyselnej automatizácie"
+  ],
+  "foto": "znackovanie.png",
+  "alt": "Stroj na laserové značenie s dotykovým panelom a dopravníkmi"
+ },
+ {
+  "nazev": "Robotika a robotizácia",
+  "body": [
+   "Automatizácia a robotizácia výrobných procesov",
+   "Programovanie a integrácia robotických systémov",
+   "Integrácia kamerových inšpekčných systémov"
+  ],
+  "foto": "kobot.png",
+  "alt": "Kolaboratívny robot AUBO s kamerou pri vyberaní dielov z prepravky"
+ },
+ {
+  "nazev": "Výrobné linky a jednoúčelové stroje",
+  "body": [
+   "Komplexné návrhy a riešenia výrobných liniek a strojov",
+   "Výroba jednoúčelových strojov",
+   "Modernizácia, rekonštrukcia a servis výrobných liniek"
+  ],
+  "foto": "linky-hala.png",
+  "alt": "Rad výrobných liniek ELRON v hale so zákazníckymi ovládacími panelmi"
+ }
 ]

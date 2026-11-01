@@ -3,15 +3,13 @@
 {% set cesta = '' %}
 {% block obsah %}
 <section class="hero">
-  <div class="wrap hero-grid">
+  <div class="hero-foto">{{ img('robot-linka.png', 'Robotické rameno SCARA s vákuovými uchopovačmi vo výrobnej bunke ELRON', sizes='(min-width: 60rem) 50vw, 100vw') }}</div>
+  <div class="wrap">
     <div class="hero-text">
       <p class="stitok">Poprad · od roku 2007</p>
       <h1>Priemyselná automatizácia, robotika a výrobné linky na mieru</h1>
       <p class="lead">Od návrhu a programovania až po integráciu, spustenie a servis.</p>
       <p class="akcie"><a class="tl" href="#kontakt">Chcem automatizovať</a> <a class="tl tl-bez" href="#sluzby">Čo robíme</a></p>
-    </div>
-    <div class="hero-foto">
-      {{ img('robot-linka.png', 'Robotické rameno SCARA s vákuovými uchopovačmi vo výrobnej bunke ELRON', sizes='(min-width: 60rem) 34rem, 90vw') }}
     </div>
   </div>
 </section>
@@ -28,15 +26,15 @@
 <section class="sekce" id="sluzby">
   <div class="wrap">
     <h2>Hlavné oblasti našich služieb</h2>
-    <div class="karty">
-      {% for s in data.sluzby %}
-      <article class="karta">
-        <span class="cislo" aria-hidden="true">{{ s.ikona }}</span>
+    {% for s in data.sluzby %}
+    <article class="riadok">
+      <div class="riadok-foto">{{ img(s.foto, s.alt, sizes='(min-width: 60rem) 34rem, 100vw') }}</div>
+      <div class="riadok-text">
         <h3>{{ s.nazev }}</h3>
         <ul role="list">{% for b in s.body %}<li>{{ b }}</li>{% endfor %}</ul>
-      </article>
-      {% endfor %}
-    </div>
+      </div>
+    </article>
+    {% endfor %}
   </div>
 </section>
 
@@ -54,24 +52,15 @@
   </div>
 </section>
 
-<section class="sekce" id="realizacie">
-  <div class="wrap">
-    <h2>Z našich realizácií</h2>
-    <div class="galeria">
-      <figure class="g-velka">{{ img('linky-hala.png', 'Rad výrobných liniek ELRON v hale so zákazníckymi ovládacími panelmi', sizes='(min-width: 60rem) 36rem, 90vw') }}<figcaption>Montážna linka</figcaption></figure>
-      <figure>{{ img('znackovanie.png', 'Stroj na laserové značenie s dotykovým panelom a dopravníkmi', sizes='(min-width: 60rem) 20rem, 90vw') }}<figcaption>Laserové značenie</figcaption></figure>
-      <figure>{{ img('montaz.png', 'Detail montážnej linky dosiek plošných spojov s pneumatikou a robotmi', sizes='(min-width: 60rem) 20rem, 90vw') }}<figcaption>Montáž dosiek plošných spojov</figcaption></figure>
-      <figure>{{ img('kobot.png', 'Kolaboratívny robot AUBO s kamerou pri vyberaní dielov z prepravky', sizes='(min-width: 60rem) 20rem, 90vw') }}<figcaption>Robot a kamera: bin picking</figcaption></figure>
-    </div>
-  </div>
-</section>
-
 <section class="sekce svetla" id="o-nas">
-  <div class="wrap uzky">
+  <div class="wrap o-nas">
+    <div class="riadok-foto">{{ img('kontrola.png', 'Kamerová inšpekcia s LED osvetlením v modrom ráme stroja', sizes='(min-width: 60rem) 34rem, 100vw') }}</div>
+    <div class="o-text">
     <h2>O našej spoločnosti</h2>
     <p>ELRON s.r.o. pôsobí v oblasti priemyselnej automatizácie a robotiky od roku 2007. Máme rozsiahle skúsenosti s návrhom, programovaním, integráciou a servisom automatizovaných systémov pre priemyselnú výrobu.</p>
     <p>Podľa požiadaviek zákazníka realizujeme automatizáciu výrobných procesov, robotické pracoviská, výrobné linky, jednoúčelové stroje aj modernizáciu existujúcich zariadení. Spájame odborné znalosti, praktické skúsenosti a individuálny prístup.</p>
     <p><a class="tl tl-bez-tmava" href="https://elron.eu.sk/">Navštíviť e-shop s komponentmi</a></p>
+    </div>
   </div>
 </section>
 
