@@ -1,0 +1,32 @@
+{
+  "slug": "sk-elron",
+  "nazev": "ELRON s.r.o.",
+  "url": "https://webhunter-navrhy.github.io/sk-elron/",
+  "base": "/sk-elron/",
+  "lang": "sk",
+  "popis": "Priemyselná automatizácia, robotika a výrobné linky na mieru. Návrh, programovanie, integrácia a servis. ELRON s.r.o., Poprad, od roku 2007.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "robot-linka.png",
+  "logo": "logo.png",
+  "theme_color": "#025886",
+  "typ": "LocalBusiness",
+  "ico": "36807478",
+  "kontakt": {
+    "email": "info@elron.eu.sk",
+    "telefon": "+421 910 222 333",
+    "adresa": {"ulice": "Popradskej brigády 747/23", "psc": "058 01", "mesto": "Poprad", "zeme": "SK"}
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "",
+  "formular": {"endpoint": "", "demo": true, "predmet": "Dopyt z webu"},
+  "nav": [
+    {"text": "Služby", "href": "#sluzby"},
+    {"text": "Cesta projektu", "href": "#cesta"},
+    {"text": "Realizácie", "href": "#realizacie"},
+    {"text": "O nás", "href": "#o-nas"},
+    {"text": "E-shop", "href": "https://elron.eu.sk/"},
+    {"text": "Kontakt", "href": "#kontakt"}
+  ]
+}

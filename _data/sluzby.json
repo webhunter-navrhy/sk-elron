@@ -1,0 +1,6 @@
+[
+  {"nazev": "Inžiniering, programovanie a servis", "ikona": "01", "body": ["Kompletné inžinierske služby a odborné poradenstvo", "Programovanie a vývoj aplikačného softvéru", "Servis, diagnostika a technická podpora"]},
+  {"nazev": "Priemyselná automatizácia", "ikona": "02", "body": ["Komplexné riešenia priemyselnej automatizácie", "Vizualizácia a riadenie technologických procesov", "Predaj a distribúcia komponentov priemyselnej automatizácie"]},
+  {"nazev": "Robotika a robotizácia", "ikona": "03", "body": ["Automatizácia a robotizácia výrobných procesov", "Programovanie a integrácia robotických systémov", "Integrácia kamerových inšpekčných systémov"]},
+  {"nazev": "Výrobné linky a jednoúčelové stroje", "ikona": "04", "body": ["Komplexné návrhy a riešenia výrobných liniek a strojov", "Výroba jednoúčelových strojov", "Modernizácia, rekonštrukcia a servis výrobných liniek"]}
+]

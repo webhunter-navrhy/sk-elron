@@ -1,0 +1,94 @@
+{% extends "_base.html" %}
+{% set titulek = 'Priemyselná automatizácia a robotika, výrobné linky na mieru – ' ~ site.nazev %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="stitok">Poprad · od roku 2007</p>
+      <h1>Priemyselná automatizácia, robotika a výrobné linky na mieru</h1>
+      <p class="lead">Od návrhu a programovania až po integráciu, spustenie a servis.</p>
+      <p class="akcie"><a class="tl" href="#kontakt">Chcem automatizovať</a> <a class="tl tl-bez" href="#sluzby">Čo robíme</a></p>
+    </div>
+    <div class="hero-foto">
+      {{ img('robot-linka.png', 'Robotické rameno SCARA s vákuovými uchopovačmi vo výrobnej bunke ELRON', sizes='(min-width: 60rem) 34rem, 90vw') }}
+    </div>
+  </div>
+</section>
+
+<section class="znacky" aria-label="Značky, s ktorými pracujeme">
+  <div class="wrap">
+    <p class="znacky-nadpis">Pracujeme s technológiami</p>
+    <ul role="list">
+      {% for z in ['OMRON','SIEMENS','Eura Drives','CUH','Allen-Bradley','AUBO','VACON','MITSUBISHI','YAMAHA','B&R'] %}<li>{{ z }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="sekce" id="sluzby">
+  <div class="wrap">
+    <h2>Hlavné oblasti našich služieb</h2>
+    <div class="karty">
+      {% for s in data.sluzby %}
+      <article class="karta">
+        <span class="cislo" aria-hidden="true">{{ s.ikona }}</span>
+        <h3>{{ s.nazev }}</h3>
+        <ul role="list">{% for b in s.body %}<li>{{ b }}</li>{% endfor %}</ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sekce tmava" id="cesta">
+  <div class="wrap">
+    <h2>Cesta projektu</h2>
+    <p class="lead">Pri každom projekte vychádzame z konkrétneho výrobného procesu a technických požiadaviek zákazníka.</p>
+    <ol class="trasa" role="list">
+      <li><span class="uzol" aria-hidden="true"></span><h3>Technický návrh</h3><p>Rozbor procesu a požiadaviek, návrh riešenia.</p></li>
+      <li><span class="uzol" aria-hidden="true"></span><h3>Programovanie</h3><p>Riadiaci a aplikačný softvér, vizualizácia.</p></li>
+      <li><span class="uzol" aria-hidden="true"></span><h3>Integrácia</h3><p>Roboty, kamerové systémy a komponenty v jednom celku.</p></li>
+      <li><span class="uzol" aria-hidden="true"></span><h3>Uvedenie do prevádzky</h3><p>Spustenie zariadenia vo výrobe.</p></li>
+      <li><span class="uzol" aria-hidden="true"></span><h3>Servis</h3><p>Diagnostika, technická podpora a modernizácia.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce" id="realizacie">
+  <div class="wrap">
+    <h2>Z našich realizácií</h2>
+    <div class="galeria">
+      <figure class="g-velka">{{ img('linky-hala.png', 'Rad výrobných liniek ELRON v hale so zákazníckymi ovládacími panelmi', sizes='(min-width: 60rem) 36rem, 90vw') }}<figcaption>Montážna linka</figcaption></figure>
+      <figure>{{ img('znackovanie.png', 'Stroj na laserové značenie s dotykovým panelom a dopravníkmi', sizes='(min-width: 60rem) 20rem, 90vw') }}<figcaption>Laserové značenie</figcaption></figure>
+      <figure>{{ img('montaz.png', 'Detail montážnej linky dosiek plošných spojov s pneumatikou a robotmi', sizes='(min-width: 60rem) 20rem, 90vw') }}<figcaption>Montáž dosiek plošných spojov</figcaption></figure>
+      <figure>{{ img('kobot.png', 'Kolaboratívny robot AUBO s kamerou pri vyberaní dielov z prepravky', sizes='(min-width: 60rem) 20rem, 90vw') }}<figcaption>Robot a kamera: bin picking</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sekce svetla" id="o-nas">
+  <div class="wrap uzky">
+    <h2>O našej spoločnosti</h2>
+    <p>ELRON s.r.o. pôsobí v oblasti priemyselnej automatizácie a robotiky od roku 2007. Máme rozsiahle skúsenosti s návrhom, programovaním, integráciou a servisom automatizovaných systémov pre priemyselnú výrobu.</p>
+    <p>Podľa požiadaviek zákazníka realizujeme automatizáciu výrobných procesov, robotické pracoviská, výrobné linky, jednoúčelové stroje aj modernizáciu existujúcich zariadení. Spájame odborné znalosti, praktické skúsenosti a individuálny prístup.</p>
+    <p><a class="tl tl-bez-tmava" href="https://elron.eu.sk/">Navštíviť e-shop s komponentmi</a></p>
+  </div>
+</section>
+
+<section class="sekce tmava" id="kontakt">
+  <div class="wrap kontakt-grid">
+    <div>
+      <h2>Máte výrobný proces, ktorý chcete automatizovať?</h2>
+      <p class="lead">Predstavte nám svoj projekt a spoločne nájdeme vhodné technické riešenie.</p>
+      <address>
+        <strong>{{ site.nazev }}</strong><br>
+        {{ site.kontakt.adresa.ulice }}<br>{{ site.kontakt.adresa.psc }} {{ site.kontakt.adresa.mesto }}<br>
+        IČO {{ site.ico }}<br>
+        <a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br>
+        <a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a>
+      </address>
+    </div>
+    {% include "_formular.html" %}
+  </div>
+</section>
+{% endblock %}
