@@ -15,10 +15,10 @@ h1{font-size:clamp(2rem,5vw,3.25rem);font-weight:700}
 h2{font-size:clamp(1.55rem,3vw,2.25rem)}
 h3{font-size:1.15rem}
 .lead{font-size:1.2rem;opacity:.92}
-.hlavicka{background:var(--m1);position:sticky;top:0;z-index:20;box-shadow:0 1px 0 rgba(255,255,255,.12)}
+.hlavicka{background:var(--m1);top:0;z-index:20;box-shadow:0 1px 0 rgba(255,255,255,.12)}
 .hlavicka .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.25rem;flex-wrap:wrap;padding-top:.4rem;padding-bottom:.4rem}
 .logo{display:inline-flex;align-items:center;min-height:44px}.logo img{height:36px;width:auto}
-.hlavicka nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+.hlavicka nav{display:flex;gap:.1rem 1.1rem;flex-wrap:wrap}
 .hlavicka nav a{color:#fff;text-decoration:none;font-size:.95rem;padding:.7rem .15rem;min-height:44px;display:inline-flex;align-items:center;border-bottom:2px solid transparent}
 .hlavicka nav a:hover,.hlavicka nav a:focus-visible{border-color:#7fd0ff}
 .hero{color:#fff;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.14) 1px,transparent 1.5px) 0 0/22px 22px,linear-gradient(135deg,var(--m1),var(--m2) 60%,var(--m3));padding:clamp(2.5rem,6vw,5rem) 0}
@@ -43,7 +43,7 @@ h3{font-size:1.15rem}
 .karty{display:grid;gap:1.25rem;margin-top:2rem}
 .karta{border:1px solid var(--ln);border-top:4px solid var(--m2);border-radius:.4rem;padding:1.5rem;background:#fff;position:relative}
 .cislo{position:absolute;right:1.25rem;top:1rem;font:700 1.6rem/1 ui-monospace,Menlo,Consolas,monospace;color:var(--ln)}
-.karta ul{list-style:none;margin:0;padding:0}
+.karta h3{padding-right:2.5rem}.karta ul{list-style:none;margin:0;padding:0}
 .karta li{padding:.5rem 0 .5rem 1.4rem;position:relative;border-top:1px solid var(--sv)}
 .karta li::before{content:"";position:absolute;left:0;top:1.1rem;width:.6rem;height:2px;background:var(--m3)}
 .trasa{list-style:none;margin:2.5rem 0 0;padding:0 0 0 2rem;position:relative;counter-reset:s}
@@ -55,7 +55,7 @@ h3{font-size:1.15rem}
 .trasa li.zap .uzol{background:#7fd0ff;border-color:#fff;box-shadow:0 0 0 5px rgba(127,208,255,.25)}
 .trasa h3{margin:0 0 .2rem}
 .trasa p{margin:0;opacity:.85}
-.galeria{display:grid;gap:1rem;margin-top:2rem}
+.galeria{display:grid;gap:1rem;margin-top:2rem}@media(min-width:48rem){.galeria{grid-template-columns:1fr 1fr}}
 .galeria figure{margin:0;position:relative;overflow:hidden;border-radius:.4rem;background:var(--tm)}
 .galeria img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem .9rem .7rem;color:#fff;font-weight:600;font-size:.95rem;background:linear-gradient(transparent,rgba(2,40,62,.85))}
@@ -72,12 +72,9 @@ address{font-style:normal;margin-top:1.5rem;line-height:1.8}
 .paticka{background:var(--tm);color:#cfe6f4;padding:1.5rem 0;font-size:.95rem}
 .paticka .wrap{display:flex;gap:.5rem 2rem;flex-wrap:wrap}
 .paticka p{margin:0}.paticka a{color:#fff}
-@media(min-width:48rem){.karty{grid-template-columns:1fr 1fr}.kontakt-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:48rem){.hlavicka{position:sticky}.karty{grid-template-columns:1fr 1fr}.kontakt-grid{grid-template-columns:1fr 1fr}}
 @media(min-width:60rem){
   .hero-grid{grid-template-columns:1.15fr .85fr}
-  .galeria{grid-template-columns:repeat(3,1fr)}
-  .g-velka{grid-column:span 2;grid-row:span 2}
-  .g-velka img{height:100%;aspect-ratio:auto;min-height:100%}
   .trasa{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;padding:2.75rem 0 0}
   .trasa::before{left:0;right:0;top:.6rem;bottom:auto;width:auto;height:3px}
   .trasa::after{left:0;top:.6rem;bottom:auto;height:3px;width:var(--pokrok,0%);max-width:100%}
